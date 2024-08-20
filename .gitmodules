@@ -1,3 +1,6 @@
 [submodule "qilin"]
 	path = qilin
 	url = git@github.com:Maksasj/qilin.git
+[submodule "nue"]
+	path = nue
+	url = git@github.com:Maksasj/nue.git
