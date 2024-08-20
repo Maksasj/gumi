@@ -1,0 +1,3 @@
+[submodule "qilin"]
+	path = qilin
+	url = git@github.com:Maksasj/qilin.git
