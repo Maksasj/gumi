@@ -4,3 +4,6 @@
 [submodule "nue"]
 	path = nue
 	url = git@github.com:Maksasj/nue.git
+[submodule "hoo"]
+	path = hoo
+	url = git@github.com:Maksasj/hoo.git
