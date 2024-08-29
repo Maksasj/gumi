@@ -7,3 +7,6 @@
 [submodule "hoo"]
 	path = hoo
 	url = git@github.com:Maksasj/hoo.git
+[submodule "mochi"]
+	path = mochi
+	url = git@github.com:Maksasj/mochi.git

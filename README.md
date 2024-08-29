@@ -5,6 +5,7 @@ Docker based microservice cluster for my personal file manager home server
 1. Source code available at [github.com/Maksasj/gumi](https://github.com/Maksasj/gumi)
 2. **🦄 qilin** source code [github.com/Maksasj/qilin](https://github.com/Maksasj/qilin)
 2. **🐦‍🔥 hoo** source code [github.com/Maksasj/hoo](https://github.com/Maksasj/hoo)
+2. **🍡 mochi** source code [github.com/Maksasj/mochi](https://github.com/Maksasj/mochi)
 2. **🐏 nue** source code [github.com/Maksasj/nue](https://github.com/Maksasj/nue)
 
 ## License 🛡
