@@ -1,0 +1,9 @@
+version: '2'
+
+# Start all machines
+services:
+    mochi:
+        container_name: mochi
+        build: mochi
+        ports:
+            - 7417:8080

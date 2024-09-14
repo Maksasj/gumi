@@ -8,7 +8,12 @@ Docker based microservice cluster for my personal file manager home server
 2. **🍡 mochi** source code [github.com/Maksasj/mochi](https://github.com/Maksasj/mochi)
 2. **🐏 nue** source code [github.com/Maksasj/nue](https://github.com/Maksasj/nue)
 
-## License 🛡
+### Docker
+```bash
+docker-compose -f docker-compose.yml up -d
+```
+
+## License
 **gumi** is free and open source software. All code in this repository is licensed under
 -  Apache-2.0 license ([LICENSE.md](https://github.com/Maksasj/gumi/blob/master/LICENSE.md) or http://www.apache.org/licenses/LICENSE-2.0)
 
