@@ -7,3 +7,18 @@ services:
         build: mochi
         ports:
             - 7417:8080
+    hoo:
+        container_name: hoo
+        build: hoo
+        ports:
+            - 7418:8080
+    qilin:
+        container_name: qilin
+        build: qilin
+        ports:
+            - 7419:8080
+    nue:
+        container_name: nue
+        build: nue
+        ports:
+            - 7420:8080
