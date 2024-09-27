@@ -10,3 +10,6 @@
 [submodule "mochi"]
 	path = mochi
 	url = git@github.com:Maksasj/mochi.git
+[submodule "dosei"]
+	path = dosei
+	url = git@github.com:Maksasj/dosei.git

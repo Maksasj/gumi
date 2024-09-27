@@ -2,6 +2,16 @@ version: '2'
 
 # Start all machines
 services:
+    dosei:
+        container_name: dosei
+        build: dosei
+        ports:
+            - 5432:5432
+        volumes:
+            - gumi:/home/dosei
+        environment:
+        - POSTGRES_PASSWORD=S3cret
+        - POSTGRES_USER=citizix_user
     mochi:
         container_name: mochi
         build: mochi
@@ -22,3 +32,7 @@ services:
         build: nue
         ports:
             - 7420:8080
+
+
+volumes:
+  gumi:
