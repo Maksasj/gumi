@@ -2,37 +2,86 @@ version: '2'
 
 # Start all machines
 services:
+    # Postgress database
     dosei:
         container_name: dosei
         build: dosei
+        privileged: true
+        restart: always
         ports:
             - 5432:5432
         volumes:
             - gumi:/home/dosei
         environment:
-        - POSTGRES_PASSWORD=S3cret
-        - POSTGRES_USER=citizix_user
+            - POSTGRES_PASSWORD=gumi
+            - POSTGRES_USER=gumi
+        networks:
+            - gumi
+        healthcheck:
+            test: ["CMD-SHELL", "pg_isready -U gumi"]
+            interval: 5s
+            timeout: 5s
+            retries: 5
+
+    # Logging microservice
     mochi:
         container_name: mochi
         build: mochi
         ports:
             - 7417:8080
+        networks:
+            - gumi
+        depends_on:
+            dosei:
+                condition: service_healthy
+        links:
+            - dosei
+        healthcheck:
+            test: curl --fail http://localhost:8080/health || exit 1
+            interval: 5s
+            timeout: 5s
+            retries: 5
+    
+    # File provider microservice
     hoo:
         container_name: hoo
         build: hoo
         ports:
             - 7418:8080
+        networks:
+            - gumi
+        depends_on:
+            mochi:
+                condition: service_healthy
+        links:
+            - mochi
+
+    # Tag bases entity manager microservice
     qilin:
         container_name: qilin
         build: qilin
         ports:
             - 7419:8080
+        networks:
+            - gumi
+        depends_on:
+            mochi:
+                condition: service_healthy
+        links:
+            - mochi
+
+    # web interface for qilin microservice
     nue:
         container_name: nue
         build: nue
         ports:
             - 7420:8080
-
+        networks:
+            - gumi
 
 volumes:
-  gumi:
+    gumi:
+
+networks:
+    gumi:
+        driver: bridge
