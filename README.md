@@ -6,7 +6,6 @@ Docker based microservice cluster for my personal file manager home server
 2. **🦄 qilin** source code [github.com/Maksasj/qilin](https://github.com/Maksasj/qilin)
 2. **🐦‍🔥 hoo** source code [github.com/Maksasj/hoo](https://github.com/Maksasj/hoo)
 2. **🍡 mochi** source code [github.com/Maksasj/mochi](https://github.com/Maksasj/mochi)
-2. **🐏 nue** source code [github.com/Maksasj/nue](https://github.com/Maksasj/nue)
 2. **🪐 dosei** source code [github.com/Maksasj/dosei](https://github.com/Maksasj/dosei)
 
 ### Docker
