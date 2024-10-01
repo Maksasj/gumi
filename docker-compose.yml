@@ -42,6 +42,16 @@ services:
             timeout: 5s
             retries: 5
     
+    # Web interface for mochi microservice
+    mochi-frontend:
+        container_name: mochi-frontend
+        build:
+            context: ./mochi/frontend
+        ports:
+            - 7424:8080
+        networks:
+            - gumi
+
     # File provider microservice
     hoo:
         container_name: hoo
