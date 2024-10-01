@@ -59,7 +59,8 @@ services:
     # Tag bases entity manager microservice
     qilin:
         container_name: qilin
-        build: qilin
+        build:
+            context: ./qilin/backend
         ports:
             - 7419:8080
         networks:
@@ -70,10 +71,11 @@ services:
         links:
             - mochi
 
-    # web interface for qilin microservice
-    nue:
-        container_name: nue
-        build: nue
+    # Web interface for qilin microservice
+    qilin-frontend:
+        container_name: qilin-frontend
+        build:
+            context: ./qilin/frontend
         ports:
             - 7420:8080
         networks:
